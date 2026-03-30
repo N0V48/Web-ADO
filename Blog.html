@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ADO</title>
+    
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* Estilos específicos para armonizar las noticias con tu diseño */
+        .post {
+            border-bottom: 1px solid var(--azul-noche);
+            padding: 40px 0;
+            transition: 0.3s ease;
+        }
+
+        .post:hover {
+            background: rgba(0, 168, 232, 0.05);
+        }
+
+        .post img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid var(--azul-noche);
+        }
+
+        .fecha {
+            font-size: 0.9rem;
+            color: var(--cian-neon);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post h4 {
+            color: #ffffff;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Reutilizamos tu estilo de botón cian para los posts */
+        .btn-blog {
+            background: transparent;
+            border: 1px solid var(--cian-neon);
+            color: white;
+            padding: 8px 25px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .btn-blog:hover {
+            background: var(--cian-neon);
+            color: var(--negro-profundo);
+            box-shadow: 0 0 15px var(--cian-neon);
+        }
+
+        @media (max-width: 768px) {
+            .post img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+            .post {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container"> 
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="Imagenes/FlorAdo3.webp" alt="logo" width="30" height="30" class="me-2">
+                    <span class="fw-bold text-info">ADO</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Que es Ado.html">¿QUIÉN ES ADO?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacto.html">CONTACTOS</a></li>
+                        
+                        <div class="ms-lg-3 d-flex align-items-center social-bar-nav">
+                            <a href="https://open.spotify.com" class="mx-2 fs-5 text-info"><i class="bi bi-spotify"></i></a>
+                            <a href="https://www.instagram.com/ado_staff_official/" class="mx-2 fs-5 text-info"><i class="bi bi-instagram"></i></a>
+                            <a href="https://x.com/ado_staff" class="mx-2 fs-5 text-info"><i class="bi bi-twitter-x"></i></a>
+                            <a href="https://www.youtube.com/@Ado1024" class="mx-2 fs-5 text-info"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </ul>
+                </div>
+            </div> 
+        </nav> 
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Ado Blog.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="py-5"> 
+        <div class="container text-center">
+            <div class="hero-content">
+                <h1 class="display-3 fw-bold text-uppercase mb-3" style="text-shadow: 0 0 20px var(--cian-neon); color: var(--cian-neon);">
+                    Blog & Noticias
+                </h1>
+                <p class="lead text-info opacity-75">Sigue de cerca la evolución del fenómeno Ado</p>
+                <div class="mx-auto mt-4" style="width: 60px; height: 2px; background: var(--cian-neon); box-shadow: 0 0 10px var(--cian-neon);"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pb-5">
+
+        <div class="row post align-items-center">
+            <div class="col-md-4">
+                <img src="Imagenes/ado Aiaia.webp" class="img-glow" alt="Nuevo álbum">
+            </div>
+            <div class="col-md-8">
+                <p class="fecha">Marzo 2026</p>
+                <h4>Nuevo álbum lanzado</h4>
+                <p class="opacity-75">
+                    Ado lanza un nuevo álbum con un estilo más intenso y experimental,
+                    sorprendiendo a todos sus fans con matices vocales nunca antes vistos.
+                </p>
+                <a href="https://www.youtube.com/watch?v=_8CNByAq1n4" target="_blank" class="btn-blog">Ver más</a>
+            </div>
+        </div>
+
+        <div class="row post align-items-center">
+            <div class="col-md-4">
+                <img src="Imagenes/ado6.avif" class="img-glow" alt="Anime">
+            </div>
+            <div class="col-md-8">
+                <p class="fecha">Febrero 2026</p>
+                <h4>Participación en anime</h4>
+                <p class="opacity-75">
+                    Ado vuelve a colaborar en un proyecto de anime masivo con nuevas canciones
+                    que prometen dominar las listas de éxitos este año.
+                </p>
+                <a href="https://myanimelist.net/people/59233/Ado" target="_blank" class="btn-blog">Leer más</a>
+            </div>
+        </div>
+
+        <div class="row post align-items-center">
+            <div class="col-md-4">
+                <img src="Imagenes/AdoConcierto2.jpg" class="img-glow" alt="Gira">
+            </div>
+            <div class="col-md-8">
+                <p class="fecha">Enero 2026</p>
+                <h4>Gira internacional "Wish"</h4>
+                <p class="opacity-75">
+                    Se anuncian las fechas oficiales para los próximos conciertos en Latinoamérica y Europa.
+                    ¡No te quedes sin tu entrada!
+                </p>
+                <a href="https://www.bandsintown.com/es/a/375683-ado" target="_blank" class="btn-blog">Ver fechas</a>
+            </div>
+        </div>
+
+        <div class="row post align-items-center">
+            <div class="col-md-4">
+                <img src="Imagenes/ado3.jpg" class="img-glow" alt="Usseewa">
+            </div>
+            <div class="col-md-8">
+                <p class="fecha">Diciembre 2025</p>
+                <h4>El impacto de USSEEWA</h4>
+                <p class="opacity-75">
+                    Analizamos cómo una canción rompió los esquemas de la sociedad japonesa y se volvió un himno viral.
+                </p>
+                <a href="https://www.youtube.com/watch?v=Qp3b-RXtz4w" target="_blank" class="btn-blog">Ver video</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-black py-5 border-top border-dark">
+        <div class="container text-center">
+            <div class="social-row mb-4">
+                <a href="https://www.youtube.com/@Ado1024" class="social-item"><i class="bi bi-youtube"></i> YouTube</a>
+                <a href="https://open.spotify.com" class="social-item"><i class="bi bi-spotify"></i> Spotify</a>
+                <a href="https://www.instagram.com/ado_staff_official/" class="social-item"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://x.com/ado_staff" class="social-item"><i class="bi bi-twitter-x"></i> Twitter</a>
+            </div>
+            <p class="text-secondary small mb-0">© 2026 Página Fan sobre Ado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
