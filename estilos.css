@@ -212,3 +212,167 @@ audio::-webkit-media-controls-time-remaining-display {
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff;
 }
+
+
+
+/* NAV BAR */
+/* Iluminación de letras en la Navbar - Modo Claro */
+body.light-mode .navbar-nav .nav-link {
+    color: #003566 !important; /* Azul oscuro legible de base */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+body.light-mode .navbar-nav .nav-link:hover,
+body.light-mode .navbar-nav .nav-link.active {
+    color: #ffffff !important; /* La letra se vuelve blanca */
+    text-shadow: 0 0 8px #00509d, 0 0 15px #00A8E8; 
+    
+}
+body.light-mode .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    box-shadow: 0 0 5px #00A8E8;
+}
+
+/* redes */
+body.light-mode .social-bar-nav a {
+    color: #003566 !important; 
+}
+
+body.light-mode .social-bar-nav a:hover {
+    color: #ffffff !important; /* El icono se vuelve blanco "brillante" */ 
+}
+
+
+
+
+
+/* MODO CLARO */
+
+/* Fondo General con tu azul seleccionado */
+body.light-mode {
+    background-color: #7ac8ff !important; /* Tu color de referencia */
+    color: #001d3d !important;           /* Azul noche para el texto */
+}
+
+/* Secciones con degradados */
+body.light-mode .bg-black, 
+body.light-mode footer,
+body.light-mode section[style*="background: linear-gradient"] {
+    background: linear-gradient(135deg, #7ac8ff 0%, #b3e5fc 100%) !important;
+    border-color: #00A8E8 !important;
+}
+
+/* Ajuste del video Hero */
+body.light-mode .hero::before {
+    background: linear-gradient(to bottom, rgba(122,200,255,0) 50%, rgba(122,200,255,1) 100%) !important;
+}
+
+/* Navbar */
+body.light-mode .navbar {
+    background: rgba(122, 200, 255, 0.95) !important;
+    border-bottom: 2px solid #00A8E8 !important;
+}
+
+body.light-mode .navbar .nav-link, 
+body.light-mode .navbar .navbar-brand,
+body.light-mode .navbar .navbar-brand span {
+    color: #001d3d !important;
+    text-shadow: none !important;
+}
+
+/* Ajuste de Cards */
+body.light-mode .card {
+    background: #ffffff !important;
+    border: 2px solid #00A8E8 !important;
+}
+
+body.light-mode .card-title {
+    color: #0077b6 !important;
+}
+
+/* Títulos y Estadísticas */
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode .stats-number {
+    color: #003566 !important; 
+    text-shadow: none !important;
+}
+
+/* Iconos y Redes Sociales */
+body.light-mode .social-item,
+body.light-mode .social-bar-nav a {
+    color: #003566 !important;
+}
+
+/* Botones */
+body.light-mode .btn-danger {
+    background-color: #00A8E8 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 168, 232, 0.3);
+}
+
+/* Menú  */
+@media (max-width: 991px) {
+    body.light-mode .navbar-collapse {
+        background: #7ac8ff !important;
+        border: 2px solid #00A8E8 !important;
+    }
+}
+
+
+/* Corrección de legibilidad para textos .text-info y .lead */
+body.light-mode .text-info, 
+body.light-mode .lead.text-info {
+    color: #003566 !important; 
+    opacity: 1 !important;     
+    font-weight: 500;          
+}
+
+/* Específico para la frase destacada */
+body.light-mode p.text-info em {
+    color: #00509d !important; 
+    border-left: 3px solid #00A8E8; 
+    padding-left: 10px;
+}
+
+body.light-mode div[style*="background: #00A8E8"] {
+    background-color: #003566 !important;
+    box-shadow: none !important;
+}
+
+/* Ajustes para el Blog en Modo Claro */
+body.light-mode .post {
+    border-bottom-color: #00A8E8 !important;
+}
+
+body.light-mode .post h4 {
+    color: #003566 !important;
+}
+
+body.light-mode .desc-post {
+    color: #001d3d !important;
+    opacity: 0.9 !important;
+}
+
+body.light-mode .fecha {
+    color: #00509d !important;
+}
+
+body.light-mode .btn-blog {
+    border-color: #003566 !important;
+    color: #003566 !important;
+}
+
+body.light-mode .btn-blog:hover {
+    background-color: #003566 !important;
+    color: #ffffff !important;
+}
+
+
+
+
+body.light-mode {
+    background-color: #7ac8ff !important;
+    color: #001d3d !important;
+}

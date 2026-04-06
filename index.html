@@ -50,7 +50,7 @@
 
 <body>
     
-    <header>
+<header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container"> 
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -64,17 +64,21 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Que es Ado.html">¿QUIÉN ES ADO?</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Blog.html">BLOG</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Contacto.html">CONTACTOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Que es Ado.html">¿Quien es Ado?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacto.html">Contactos</a></li>
                         
-                        <div class="ms-lg-3 d-flex align-items-center social-bar-nav">
+                        <div class="ms-lg-3 d-flex align-items-center social-bar-nav border-end pe-3 border-secondary">
                             <a href="https://open.spotify.com/artist/6m4UvYGrd45yX8wQpbyCqU" target="_blank" class="mx-2 fs-5 text-info"><i class="bi bi-spotify"></i></a>
                             <a href="https://www.instagram.com/ado_staff_official/" target="_blank" class="mx-2 fs-5 text-info"><i class="bi bi-instagram"></i></a>
                             <a href="https://x.com/ado_staff" target="_blank" class="mx-2 fs-5 text-info"><i class="bi bi-twitter-x"></i></a>
                             <a href="https://www.youtube.com/@Ado1024" target="_blank" class="mx-2 fs-5 text-info"><i class="bi bi-youtube"></i></a>
+                        </div>
+
+                        <div class="theme-switch-wrapper ms-3">
+                            <i id="theme-icon" class="bi bi-sun-fill"></i>
                         </div>
                     </ul>
                 </div>
@@ -84,7 +88,7 @@
 
     <section class="hero">
         <video autoplay muted loop playsinline onclick="this.muted=!this.muted">
-            <source src="Ado Menu.mp4" type="video/mp4">
+            <source src="Ado servicios.mp4" type="video/mp4">
         </video>  
     </section>
 
@@ -241,6 +245,39 @@
         </div>
     </footer>
 
+
+    <script>
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        //revisar si ya existía una preferencia guardada
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+            themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+            themeIcon.style.color = '#001d3d';
+        }
+
+        themeIcon.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            let theme = 'dark'; // Por defecto es oscuro
+
+            if (body.classList.contains('light-mode')) {
+                themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+                themeIcon.style.color = '#001d3d';
+                theme = 'light'; // Si activó el claro, guardamos
+            } else {
+                themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+                themeIcon.style.color = '#00A8E8';
+                theme = 'dark';
+            }
+
+            // 3. Guardar la elección
+            localStorage.setItem('theme', theme);
+        });
+    </script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
